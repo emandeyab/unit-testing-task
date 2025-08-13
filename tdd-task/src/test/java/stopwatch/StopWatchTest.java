@@ -31,4 +31,16 @@ public class StopWatchTest {
         Assertions.assertEquals(0, stopWatch.getHours());
     }
 
+    @Test
+    void givenMoreThan3600Seconds_whenRecord_thenConvertToHours() {
+        //Arrange
+        StopWatch stopWatch = new StopWatch();
+        //Act
+        stopWatch.record(3675);
+        //Assert
+        Assertions.assertEquals(15, stopWatch.getSeconds());
+        Assertions.assertEquals(1, stopWatch.getMinutes());
+        Assertions.assertEquals(1, stopWatch.getHours());
+    }
+
     }
