@@ -16,6 +16,13 @@ public class StopWatch {
             this.minutes = seconds / 60;
             this.hours = 0;
         }
+        if(seconds >= 3600){
+            this.hours = seconds / 3600;
+            int remaining = seconds % 3600;
+            this.seconds = remaining % 60;
+            this.minutes = remaining / 60;
+
+        }
     }
 
     public int getHours() {
