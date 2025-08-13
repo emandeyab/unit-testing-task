@@ -6,7 +6,11 @@ public class StopWatch {
     int seconds;
 
     public void record(int seconds) {
-
+        if(seconds < 60){
+            this.seconds = seconds;
+            this.minutes = 0;
+            this.hours = 0;
+        }
     }
 
     public int getHours() {
