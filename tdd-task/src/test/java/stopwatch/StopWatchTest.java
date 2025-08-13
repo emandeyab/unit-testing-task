@@ -47,8 +47,6 @@ public class StopWatchTest {
     void givenNegativeSeconds_whenRecord_thenThrowException() {
         //Arrange
         StopWatch stopWatch = new StopWatch();
-        //Act
-        stopWatch.record(-50);
         //Assert
         Assertions.assertThrows(IllegalArgumentException.class, () -> stopWatch.record(-50));
     }

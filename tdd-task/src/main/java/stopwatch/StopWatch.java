@@ -6,6 +6,9 @@ public class StopWatch {
     int seconds;
 
     public void record(int seconds) {
+        if (seconds < 0) {
+            throw new IllegalArgumentException("Time cannot be negative");
+        }
         if(seconds < 60){
             this.seconds = seconds;
             this.minutes = 0;
